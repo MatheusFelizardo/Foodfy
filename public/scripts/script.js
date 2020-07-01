@@ -1,28 +1,10 @@
+const receitas = document.querySelectorAll('.receitas')
 
-let receitas = document.querySelectorAll (".receitas")
+for (let i = 0; i < receitas.length; i++) {
+    let recipeIndex = i
 
-
-for (let receita of receitas) {
-    let id = receita.getAttribute ("id")
-    
-    receita.addEventListener ("click", () => {
-        window.location (`receitas/teste`)
+    receitas[i].addEventListener('click', () => {
+        window.location.href = `/receitas/${recipeIndex}`
+      
     })
-
 }
-
-// server.get (`/receitas/`, function (req,res) 
-// {   let receitas = document.querySelectorAll (".receitas")
-
-
-//     for (let receita of receitas) {
-//         let id = receita.getAttribute ("id")
-        
-//         receita.addEventListener ("click", () => {
-//             window.location (`receitas/${id}`)
-//         })
-    
-//     return res.render (`/receitas/${id}`, {data})
-//     }
-
-// })
