@@ -61,11 +61,21 @@ header #menu a:hover {
     font-size: 28px;
 }
 
+#pagina-sobre #sobre {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+#pagina-receitas #receitas {
+    font-weight: bold;
+    font-size: 28px; 
+}
+
 /* === CONTEINER 1 (COM IMAGEM DO CHEF) === */
 
 main .content1 {
     display: flex;
-    background-color: whitesmoke;
+    background-color: white;
     border-radius: 30px;
     height: 380px;
     margin: auto;
@@ -122,7 +132,7 @@ main .content2 {
         width: 300px;
         border: 2px solid darkgrey;
         border-radius: 10px;
-        background-color: whitesmoke;
+        background-color: white;
         height: 235px;
 }
 
@@ -153,7 +163,7 @@ main .content2 {
 }
 
 .footer {
-    background-color: whitesmoke; 
+    background-color: white; 
     height: 80px;
     margin-top: 40px;
     display: flex;
@@ -165,7 +175,7 @@ main .content2 {
 /* === PAGINA SOBRE === */
 
 .comum {
-    background-color: whitesmoke; 
+    background-color: white; 
     padding: 10px;
     padding-left: 20px;
     margin-bottom: 20px;
@@ -203,7 +213,7 @@ main .content3 {
         width: 320px;
         border: 2px solid darkgrey;
         border-radius: 10px;
-        background-color: whitesmoke;
+        background-color: white;
         height: 255px;
         
 }
@@ -212,7 +222,7 @@ main .content3 {
    
     cursor: pointer;
     background: bisque;
-    color: lightsalmon;
+    color: salmon;
 }
 
 .receitas img {

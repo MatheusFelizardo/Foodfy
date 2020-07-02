@@ -20,7 +20,10 @@
     
 
 </head>
-<body>
+{% block id %}
+    <body>  
+{% endblock id %}
+
 
     <div id="pageHome">
     <header>
@@ -29,8 +32,8 @@
         </div>
 
         <div id="menu">
-            <a href="sobre">Sobre</a>
-            <a href="receitas">Receitas</a>
+            <a href="sobre" id="sobre">Sobre</a>
+            <a href="receitas" id="receitas">Receitas</a>
         </div>
     </header>
 

@@ -3,6 +3,7 @@ const server = express()
 
 const nunjucks = require ("nunjucks")
 const receitas = require ("./data")
+const { indexOf } = require("./data")
 
 server.use(express.urlencoded({extended:true}))
 server.set ("view engine", "njk")
@@ -35,6 +36,14 @@ server.get ("/receitas", function (req,res) {
 server.get("/receitas/:index", function(req, res) {
     const receitaIndex = req.params.index;
     const receita = receitas[receitaIndex]
+
+    if ( receitaIndex === "receitas") {
+        return res.redirect ("/receitas") 
+    }
+
+    if (receitaIndex === "sobre") {
+        return res.redirect ("/sobre")
+    }
 
     return res.render("receita", {receita})
 
