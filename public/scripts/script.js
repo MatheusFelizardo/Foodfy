@@ -1,3 +1,5 @@
+
+
 const receitas = document.querySelectorAll('.receitas')
 for (let i = 0; i < receitas.length; i++) {
     let recipeIndex = i
@@ -29,3 +31,7 @@ for (let info of receitaInfo ) {
     })
 
 }
+
+
+
+

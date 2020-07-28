@@ -1,0 +1,287 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+
+
+/* === MENU TOPO === */
+
+#pageHome { 
+    width: 960px;
+    margin: auto;
+
+}
+
+header {
+    display: flex;
+    width: 100%;
+    background-color: black;
+}
+
+header #logo {
+    margin: 40px 0 40px 12% ;
+    width: 120px;
+}
+
+header #logo img {
+    width: 120px;
+}
+
+header #menu {
+margin: 40px auto;
+   width: 240px;
+}
+
+#menu span {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+/* === PAGE ADMIN/RECEITAS === */
+
+#gerenciador {
+    margin:60px auto 60px 12%;
+    
+}
+
+#gerenciador h3 {
+    margin-bottom: 2.7%;
+    font-size: 24px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 900px;
+}
+
+.card-items {
+    width: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 1.8%;
+}
+
+.card-items h2 {
+    font-size: 18px;
+}
+
+.card-items p {
+    font-size: 14px;
+}
+
+.card-items a {
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.card-items img {
+    width: 180px;
+    height: 80px;
+    border-radius: 8px;
+}
+
+/* === ERRO 404 === */
+
+.not-found {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* PAGINA CREATE RECEITAS */
+
+.card-create {
+    width: 940px;
+    margin: 40px auto;
+}
+
+.header-create {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-create h3 {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.header-create button {
+    border: none;
+    padding: 8px;
+    margin-right: 10%;
+    background-color: #0c68a5;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+section {
+    width: 940px;
+}
+
+.fild-create {
+    padding: 8px 0;
+}
+
+.fild-create p{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.fild-create input {
+    margin: 8px 0 6px 0;
+    width: 835px;
+    height: 20px;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 8px;
+    font: #DDDDDD;
+    outline: none;
+}
+
+.fild-create .btn {
+    display: inline-block;
+    margin-top: 4px;
+    text-decoration: none;
+    color: #0c68a5;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    outline: none;
+}
+
+.adicionais { 
+    
+    max-height: 100px;
+    min-height: 100px;
+    max-width: 845px;
+    min-width: 845px;
+    border: 1px solid rgb(221, 221, 221);
+    margin-top: 8px 0;
+    height: 136px;
+    appearance: textfield;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* AREA DE EXIBIÇÃO DA RECEITA */
+
+
+.container { 
+    text-align: center;
+    background: white;
+    padding-top: 40px;
+    border-radius: 10px;
+    width: 940px;
+    margin: 60px auto;
+    
+}
+
+.receita-principal img {
+    width: 940px;
+    height: 280px;
+    border-radius: 20px;
+}
+
+.header-principal h2  {
+    font-size: 36px;
+    line-height: 42px;
+    padding: 10px;
+    margin-top: 10px; 
+}
+
+.header-principal {
+    font-size: 20px;
+}
+
+main {
+    text-align: left;
+}
+
+.receita-info {
+    margin-top: 60px;
+    max-width: 920px;
+    margin-left: 8px;
+}
+
+.receita-header {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 15px;
+    height: 45px;
+}
+
+.receita-header h2 {
+    font-size: 26px;
+    margin-right: 10px;
+}
+
+.show-and-hide {
+    padding: 3px;
+    font-size: 10px;
+    background:lightsalmon;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.show-and-hide:hover {
+    background-color: salmon;
+}
+
+.receita-information {
+    max-width: 800px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 15px;
+}
+
+.footer {
+    background-color: whitesmoke; 
+    height: 80px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+
+/* == SCRIPT DE OCUTAR */
+
+.visible {
+    visibility: visible;
+    
+}
+
+.hidden {
+    visibility: hidden;
+    display: none;
+}
+

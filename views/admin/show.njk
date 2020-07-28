@@ -1,20 +1,21 @@
-{% extends "layout.njk" %}
+{% extends "admin/layout.njk" %}
 
 
-{% block styles %}
-<link rel="stylesheet" href="/styles/receita.css">
-{% endblock styles %}
+{% block title %}
+    <title>Foodfy - Receita</title>
+{% endblock title %}
 
 {% block content %}
 
 <div class="container">
         <div class="receita-principal">
-            <img src="{{receita.image }}" alt="{{ receita.title }}">
+            <img src="{{receitas.image}}" alt="{{ receitas.title }}">
             <div class="header-principal">
-                <h2>{{ receita.title }}</h2>
-                <p> por {{receita.author}}</p>
+                <h2>{{ receitas.title }}</h2>
+                <p> por {{receitas.name}}</p>
             </div>
         </div>
+        
     <main>
         <section class="receita-info">
             <div class="receita-header">
@@ -22,8 +23,8 @@
                 <a class="show-and-hide">Esconder</a>
             </div>
             <ul class="receita-information visible">
-            {% for ingredient in receita.ingredients %}
-                <li>{{ ingredient }}</li>
+            {% for ingrediente in receitas.ingredientes %}
+                <li>{{ ingrediente }}</li>
             {% endfor %}
             </ul>
         </section>
@@ -34,7 +35,7 @@
                 <a class="show-and-hide">Esconder</a>
             </div>
             <ul class="receita-information visible">
-            {% for steps in receita.preparation %}
+            {% for steps in receitas.modo_preparo %}
                 <li>{{ steps }}</li>
             {% endfor %}
             </ul>                
@@ -45,7 +46,7 @@
                 <h2>Informações adicionais</h2>
                 <a class="show-and-hide">Esconder</a>
             </div>
-            <p class="receita-information visible">{{ receita.information }}</p>
+            <p class="receita-information visible">{{ receitas.adicionais }}</p>
         </section>  
     <main>    
 </div>

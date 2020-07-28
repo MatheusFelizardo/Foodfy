@@ -119,6 +119,8 @@ main {
 
 .receita-information {
     max-width: 800px;
+    display: inline-block;
+    margin-bottom: 20px;
 }
 
 .footer {
