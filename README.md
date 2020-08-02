@@ -56,7 +56,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 ## Licença 
 
 <p align="center">
-  Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes. </br>
+  Esse projeto está sob a licença MIT. </br>
   <a href="LICENSE">
     <img alt="License" src="https://img.shields.io/badge/license-MIT-%23F8952D">
   </a>
