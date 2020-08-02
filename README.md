@@ -1,11 +1,8 @@
 <h2 align="center">Foodfy</h2>
 
-___
-
 <p align="center">
   <img src="https://i.ibb.co/T4dfQr5/site.png" width="500" heigth="500">
 </p>
-___
 
 <h3 align="center">
   <a href="#information_source-sobre">Sobre</a>&nbsp;|&nbsp;
