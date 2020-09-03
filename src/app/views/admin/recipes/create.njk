@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Receitas - Editar receitas</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/admin.css">
+
+</head>
+<body>  
+
+    <div id="">
+
+        <header>
+            <div id="logo">
+            <a href="/"><img src="/logo-admin.png" alt="Foodly"></a>   
+            </div>
+             <div id=links>
+                <a href="/admin/receitas">RECEITAS</a>
+                <a href="/admin/chefs">CHEFS</a>
+            </div>
+        </header>
+        
+        <div class="card-create">
+
+             <form action="/admin/receitas" method="POST" id="form">
+
+                <div class="header-create">
+                <h3>Criar receita </h3>
+                <button type="submit">Salvar receita</button>
+                </div>
+
+                <section>
+
+                    <div class="fild-create">
+                        <div><p>Título</p> </div>
+                        <div>
+                        <input required type="text" name="title" placeholder="Digite o nome da receita" >
+                        </div>
+                    </div>
+
+                    <div class="fild-create">
+                        <div> <p>Imagem da Receita</p> </div>
+                        <div>
+                        <input required type="url" name="image" >
+                        </div>
+                    </div>
+
+                    <div class="fild-create">
+                        <div><p>por</p> </div>
+                        <div>
+                            <select name="chef">
+                                {% for chef in chefs %}
+                                    <option value="{{chef.id}}" {% if chef.name == chef.name %} selected 
+                                    {% endif %}>                            
+                                    {{chef.name}}                   
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="fild-create">
+                        <div><p>Ingredientes</p> </div>
+
+                        <div id="ingredientes">
+                            <div class="ingredientes">   
+                                <input required type="text" name="ingredients[]" value="" >
+                            </div>
+                        </div>
+
+                        <div>  
+                            <button type="button" class="btn adicionar-ingrediente">Adicionar novo ingrediente</button> |
+                            <button type="button" class="btn remover-ingrediente">Remover ingrediente</button>
+                        </div>
+
+                    </div>
+
+                     <div class="fild-create">
+                        <div><p>Modo de preparo</p> </div>
+                        <div id="preparation">
+                            <div class="preparation">
+                                <input required type="text" name="preparation[]" value="">
+                            </div>
+                        </div>
+                          <div>
+                            <button type="button" class="btn adicionar-passos">Adicionar novo passo</button> |
+                            <button type="button" class="btn remover-passos">Remover passo</button>
+                        </div>
+                    </div>
+
+                    <div class="fild-create">
+                        <div> <p>Informações adicionais</p> </div>
+                        <div>
+                        <textarea class="adicionais" name="information" id="form" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+
+                </section>
+
+                
+
+            </form>
+
+        </div>
+
+    </div>
+    
+    <footer class="footer">
+    <p>Receitas Foodly - Todos os direitos reservados &copy</p>
+    </footer>
+
+    <script src="/scripts/admin_script.js"></script>
+
+</body>
+</html>

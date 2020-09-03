@@ -1,0 +1,64 @@
+{% extends "admin/recipes/layout.njk" %}
+
+
+{% block title %}
+    <title>Foodfy - Receita</title>
+{% endblock title %}
+
+{% block content %}
+
+
+
+<div class="container">
+
+        <div class="menu-editar">
+            <h4>Receita: {{recipes.title}}</h4> 
+            <a href="/admin/receitas/{{recipes.id}}/editar">Editar receita</a>
+        </div>
+        
+        <div class="receita-principal">
+            <img src="{{recipes.image}}" alt="{{ recipes.title }}">
+            <div class="header-principal">
+                <h2>{{ recipes.title }}</h2>
+                <p> por {{recipes.chef_name}}</p>
+            </div>
+        </div>
+        
+    <main>
+        <section class="receita-info">
+            <div class="receita-header">
+                <h2>Ingredientes</h2>
+                <a class="show-and-hide">Esconder</a>
+            </div>
+            <ul class="receita-information visible">
+            {% for ingredients in recipes.ingredients %}
+                <li>- {{ ingredients }}</li>
+            {% endfor %}
+            </ul>
+        </section>
+        
+        <section class="receita-info">
+            <div class="receita-header">
+                <h2>Modo de preparo</h2>
+                <a class="show-and-hide">Esconder</a>
+            </div>
+            <ul class="receita-information visible">
+            {% for steps in recipes.preparation %}
+                <li>- {{ steps }}</li>
+            {% endfor %}
+            </ul>                
+        </section>
+
+        <section class="receita-info">
+            <div class="receita-header">
+                <h2>Informações adicionais</h2>
+                <a class="show-and-hide">Esconder</a>
+            </div>
+            <p class="receita-information visible">{{ recipes.information }}</p>
+        </section>  
+    <main>    
+</div>
+
+<script src="/scripts/script.js"></script>
+{% endblock content %}
+

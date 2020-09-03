@@ -33,10 +33,30 @@ header #logo img {
     width: 120px;
 }
 
+header #links {
+    align-self: center;
+    margin-left: 60px;
+    width: 150px;
+}
+
+header #links a {
+    text-decoration: none;
+    color: #999999;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+header #links a.active {
+    color: white;
+}
+
+
+
 header #menu {
 margin: 40px auto;
    width: 240px;
 }
+
 
 #menu span {
     font-weight: bold;
@@ -99,7 +119,7 @@ margin: 40px auto;
 /* PAGINA CREATE RECEITAS */
 
 .card-create {
-    width: 940px;
+    width: 854px;
     margin: 40px auto;
 }
 
@@ -118,13 +138,53 @@ margin: 40px auto;
 .header-create button {
     border: none;
     padding: 8px;
-    margin-right: 10%;
     background-color: #0c68a5;
     color: white;
-    border-radius: 8px;
+    border-radius: 4px;
     font-weight: bold;
     cursor: pointer;
+    margin-right: 9.5%;
 }
+
+
+.header-edit {
+    width:870px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-edit h3 {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.header-edit button {
+    border: none;
+    padding: 8px;
+    background-color: #0c68a5;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 9.5%;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.buttons button {
+    width: 156px;
+}
+
+.buttons button:last-child {
+background-color: crimson;
+}
+
 
 section {
     width: 940px;
@@ -139,6 +199,15 @@ section {
     font-weight: bold;
 }
 
+.fild-create select {
+    width: 855px;
+    margin: 8px 0 6px 0;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 8px;
+    outline: none;
+}
 
 .fild-create input {
     margin: 8px 0 6px 0;
@@ -168,8 +237,8 @@ section {
     
     max-height: 100px;
     min-height: 100px;
-    max-width: 845px;
-    min-width: 845px;
+    max-width: 835px;
+    min-width: 835px;
     border: 1px solid rgb(221, 221, 221);
     margin-top: 8px 0;
     height: 136px;
@@ -182,8 +251,31 @@ section {
 
 /* AREA DE EXIBIÇÃO DA RECEITA */
 
+.menu-editar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    border: 1px solid #DDDD;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.menu-editar h4 {
+    margin-left: 10px;
+}
+
+.menu-editar a {
+    text-decoration: none;
+    background-color: #0c68a5;
+    padding: 6px;
+    border-radius: 4px;
+    color: white;
+    margin-right: 2px;
+}
 
 .container { 
+    
     text-align: center;
     background: white;
     padding-top: 40px;
@@ -204,6 +296,7 @@ section {
     line-height: 42px;
     padding: 10px;
     margin-top: 10px; 
+
 }
 
 .header-principal {
@@ -227,6 +320,8 @@ main {
     margin-bottom: 15px;
     height: 45px;
 }
+
+
 
 .receita-header h2 {
     font-size: 26px;
@@ -254,12 +349,12 @@ main {
 
 ul {
     display: block;
-    list-style-type: disc;
+    list-style-type: none;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    padding-inline-start: 15px;
+    padding-inline-start: 0;
 }
 
 .footer {
@@ -272,6 +367,153 @@ ul {
     font-size: 20px;
 }
 
+.footer-create {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* == AREA DE EXIBIÇÃO DE TODOS OS CHEFS */
+
+.container-chef { 
+    margin: 60px auto;
+    width: 940px;
+}
+
+.container-chef h3 {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+
+.chefs-cards section {
+    width: 200px;
+}
+
+.chefs-cards { 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 940px;
+}
+
+.chef-card {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    border: 1px solid #DDDD;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.chef-card img {
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+   
+}
+
+.chef-card div {
+    padding: 10px;
+}
+
+.chef-card div h4 {
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 5px;
+}
+
+.chef-card div a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #0c68a5;
+    font-weight: bold;
+}
+/* == AREA DE ADMIN DO CHEF */
+
+.header-create button.chef-button {
+    margin-right: 0;
+}
+
+/* PAGINA DE EXIBIÇÃO DO CHEF */
+
+.chef-principal img {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;  
+}
+
+.chef-principal p {
+    font-size: 20px;
+    color: #777777 ;
+}
+
+.chef-recipes-container {
+    margin-top: 60px;
+    max-width: 920px;
+    margin-left: 8px;
+}
+.chef-recipes-container h2 {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.cards-recipes section {
+    width: 250px;
+}
+
+.cards-recipes { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 940px;
+    grid-gap: 20px;
+}
+
+.cards-recipes section {
+    width: auto;
+}
+
+.recipe-card {
+    padding:10px;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    border: 1px solid #DDDD;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.recipe-card img {
+    width: 170px;
+    height: 80px;
+    align-self: center;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+.recipe-card div {
+    margin: 10px;
+    text-align: center;
+}
+
+.recipe-card h4 {
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.recipe-card p {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 5px;
+    color: #777777;
+}
+
+.recipe-card a {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 16px;
+    color: #0c68a5;
+    font-weight: bold;
+}
 
 /* == SCRIPT DE OCUTAR */
 

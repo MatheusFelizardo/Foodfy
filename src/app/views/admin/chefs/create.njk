@@ -1,0 +1,49 @@
+{% extends "admin/chefs/layout.njk" %}
+
+
+{% block title %}
+    <title>Foodfy - Criar Chef</title>
+{% endblock title %}
+
+{% block content %}
+
+
+<div class="card-create">
+
+             <form action="/admin/chefs" method="POST" id="form">
+
+                <div class="header-create">
+                <h3>Criando chef </h3>
+                <button class="chef-button" type="submit">Salvar Chef</button>
+                </div>
+
+                <section>
+                    <div class="fild-create">
+                        <div><p>Nome</p></div>
+                        <div>
+                        <input required type="text" name="name" >
+                        </div>
+                    </div>
+
+                    <div class="fild-create">
+                        <div> <p>Avatar</p> </div>
+                        <div>
+                        <input required type="url" name="avatar_url">
+                        </div>
+                    </div>
+                </section>
+
+            </form>
+
+        </div>
+
+        
+        {% block footer %}
+            <footer class="footer footer-create">
+                    <p>Receitas Foodly - Todos os direitos reservados &copy</p>
+            </footer>
+        {% endblock footer %}
+
+<script src="/scripts/script.js"></script>
+{% endblock content %}
+

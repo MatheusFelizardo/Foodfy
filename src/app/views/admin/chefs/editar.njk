@@ -1,0 +1,60 @@
+{% extends "admin/chefs/layout.njk" %}
+
+
+{% block title %}
+    <title>Foodfy - Criar Chef</title>
+{% endblock title %}
+
+{% block content %}
+
+
+<div class="card-create">
+
+             <form action="/admin/chefs?_method=PUT" method="POST" id="form">
+                <input type="hidden" name="id" value="{{chefs.id}}">
+
+                <div class="header-edit">
+                    <h3>Editar chef </h3>
+
+                    <div class="buttons">
+                        <button type="submit">Salvar alterações</button>
+                        <button class="delete" form="delete" type="submit">Deletar</button>  
+                    </div>
+                </div>
+
+                <section>
+                    <div class="fild-create">
+                        <div><p>Nome</p></div>
+                        <div>
+                        <input required type="text" name="name" value="{{chefs.name}}" >
+                        </div>
+                    </div>
+
+                    <div class="fild-create">
+                        <div> <p>Avatar</p> </div>
+                        <div>
+                        <input required type="url" name="avatar_url" value="{{chefs.avatar_url}}">
+                        </div>
+                    </div>
+                </section>
+
+                </form>
+                
+                <form action="/admin/chefs?_method=DELETE" method="POST" id="delete">
+                <input type="hidden" name="id" value="{{chefs.id}}">
+                </form>
+                    
+                <input class="totalCount" type="hidden" value="{{count.total}}">
+
+        </div>
+
+        
+        {% block footer %}
+            <footer class="footer footer-create">
+                    <p>Receitas Foodly - Todos os direitos reservados &copy</p>
+            </footer>
+        {% endblock footer %}
+
+<script src="/scripts/script.js"></script>
+{% endblock content %}
+

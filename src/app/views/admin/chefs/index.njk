@@ -1,0 +1,30 @@
+{% extends "admin/chefs/layout.njk" %}
+
+
+{% block title %}
+    <title>Foodfy - Chefs</title>
+{% endblock title %}
+
+{% block content %}
+
+<div class="container-chef">
+
+        <h3>Gerenciar chefs</h3>
+
+        <div class="chefs-cards">
+        {% for chef in chefs %}
+        <section class="chef-card">
+            <img src="{{chef.avatar_url}}" alt="Foto do Chef">
+            <div>
+            <h4>{{chef.name}}</h4>
+            <a href="/admin/chefs/{{chef.id}}">Visualizar</a>
+            </div>
+        </section>
+        {% endfor %}
+        </div>
+        
+</div>
+
+<script src="/scripts/script.js"></script>
+{% endblock content %}
+
