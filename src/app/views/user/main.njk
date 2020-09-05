@@ -27,11 +27,11 @@
 
         <div class="content2">
            
-            {% for receita in receitas %}
-                <div class="receitas" id="{{receita.image}}" name= "{{receita.title}}">
-                    <img src="{{receita.image}}" alt="{{receita.title}}">
-                    <h2>{{receita.title}}</h2>
-                    <p>por {{receita.author}}</p>
+            {% for recipe in recipes %}
+                <div class="receitas" id="{{recipe.id}}" name= "{{recipe.title}}">
+                    <img src="{{recipe.image}}" alt="{{recipe.title}}">
+                    <h2>{{recipe.title}}</h2>
+                    <p>por {{recipe.chef_name}}</p>
                 </div>
             {% endfor %}
         

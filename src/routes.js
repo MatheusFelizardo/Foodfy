@@ -2,40 +2,19 @@ const express = require ("express")
 const routes = express.Router()
 const recipes = require("./app/controllers/recipes")
 const chefs = require("./app/controllers/chefs")
+const Recipes = require("./models/Recipes")
+const Chefs = require("./models/Recipes")
+const users = require("./app/controllers/users")
+
 
 
 // ROTAS DO USUÁRIO 
+routes.get ("/", users.index)
+routes.get ("/sobre", users.about)
+routes.get ("/receitas", users.recipes)
+routes.get("/receitas/:id", users.show)
+routes.get("/chefs", users.chefs)
 
-routes.get ("/", function (req,res) {
-
-return res.render("./user/main")
-
-})
-
-routes.get ("/sobre", function (req,res) {
-    return res.render("./user/sobre")
-})
-
-routes.get ("/receitas", function (req,res) {
-    return res.render("./user/receitas")
-})
-
-
-routes.get("/receitas/:index", function(req, res) {
-    // const receitaIndex = req.params.index;
-    // const receita = receitas[receitaIndex]
-
-    if ( receitaIndex === "receitas") {
-        return res.redirect ("/receitas") 
-    }
-
-    if (receitaIndex === "sobre") {
-        return res.redirect ("/sobre")
-    }
-
-    return res.render("./user/receita", {receita})
-
-})
 
 // ROTAS DE ADMIN
 

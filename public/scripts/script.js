@@ -1,14 +1,16 @@
 // SCRIPT DA PAGINA DOS USER PARA DIRECIONAR PARA PÁGINA DE ACORDO COM A RECEITA CLICADA
 
 const receitas = document.querySelectorAll('.receitas')
-for (let i = 0; i < receitas.length; i++) {
-    let recipeIndex = i
 
-    receitas[i].addEventListener('click', () => {
-        window.location.href = `/receitas/${recipeIndex}`
-      
-    })
-}
+receitas.forEach((item)=>{
+item.addEventListener("click", ()=> {
+    location.href = `receitas/${item.id}` 
+})
+
+})
+
+
+// SCRIPT DO SHOW AND HIDE DA PAGINA DE SHOW DE CADA RECEITA
 
 const receitaInfo = document.querySelectorAll (".receita-info")
 
@@ -40,7 +42,6 @@ function showAndHide() {
 // SCRIPT PARA COLOCAR A COR ATIVA DE ACORDO COM A PAGINA 
 
 const menuItems = document.querySelectorAll ("#links a")
-console.log(menuItems)
 for (item of menuItems) {
        if (location.pathname.includes(item.getAttribute("href"))) {
         console.log(location.pathname.includes(item.getAttribute("href")))

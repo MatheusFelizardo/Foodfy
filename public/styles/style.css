@@ -4,10 +4,17 @@
     padding: 0;
 }
 
+html, body{ 
+    height:100%; 
+    margin:0; 
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     width: 100%;
-    background: #faead6;
+    background: aliceblue;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -17,29 +24,28 @@ body {
 
 #pageHome { 
     width: 960px;
-    margin: auto;
-
+    margin: 0 auto;
 }
 
 header {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 140px 1fr 1fr;
     align-items: center;
-    width: 500px;
+    margin: 40px auto;
 }
 
 header #logo {
-    margin: 40px auto;
     width: 120px;
+    margin-left: 10px;
 }
 
 header #logo img {
-    width: 120px;
+    margin-left: 10px;
 }
 
 header #menu {
-margin: 40px auto;
-   width: 240px;
+    margin: auto 60px;
+  
 }
 
 #menu span {
@@ -50,28 +56,60 @@ margin: 40px auto;
 
 header #menu a{
     text-decoration: none;
-    font-size: 24px;
-    line-height: 19px;
+    font-size: 20px;
+    line-height: 28px;
     margin: 10px;
     color: black;
 }
 
 header #menu a:hover {
-    font-weight: bold;
-    font-size: 28px;
+    color: #1198F2;  
+}
+
+#search-bar {
+    text-align: center;
+}
+
+#search-bar button {
+    border: none;
+    padding: 4px;
+    background-color: #1198F2;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    
+}
+
+#search-bar input{
+    margin: 8px 0 6px 0;
+    height: 10px;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 8px;
+    font: #DDDDDD;
+    outline: none;
 }
 
 #pagina-sobre #sobre {
+    color: black;
     font-weight: bold;
-    font-size: 28px;
+   
 }
 
 #pagina-receitas #receitas {
+    color: black;
     font-weight: bold;
-    font-size: 28px; 
+}
+
+#pagina-chefs #chefs{
+    color: black;
+    font-weight: bold;
 }
 
 /* === CONTEINER 1 (COM IMAGEM DO CHEF) === */
+
 
 main .content1 {
     display: flex;
@@ -103,7 +141,8 @@ main .content1 {
 
 .textContent1 h1 {
     font-size: 38px;
-    line-height: 38px;  
+    line-height: 38px; 
+    font-weight: 500; 
 }
 
 .textContent1 p {
@@ -114,9 +153,10 @@ main .content1 {
 /* === CONTEINER 2 (ALIMENTOS) === */
 
 main h3 {
-    font-size: 26px;
+    font-size: 24px;
     margin-top: 60px;
     margin-left: 5px;
+    font-weight: 500;
 }
 
 main .content2 {
@@ -126,21 +166,7 @@ main .content2 {
     width: 100%;
     gap: 20px;
     padding: 5px;
-}
-
-.receita { 
-        width: 300px;
-        border: 2px solid darkgrey;
-        border-radius: 10px;
-        background-color: white;
-        height: 235px;
-}
-
-.receita:hover {
-   
-    cursor: pointer;
-    background: bisque;
-    color: lightsalmon;
+    margin-bottom: 40px;
 }
 
 .receita img {
@@ -150,7 +176,7 @@ main .content2 {
 }
 
 .receita h2 {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 8px;
     text-align: center;
 }
@@ -163,38 +189,40 @@ main .content2 {
 }
 
 .footer {
-    background-color: white; 
-    height: 80px;
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
+    background-color: white;
+    padding: 10px;
+    margin-top: auto;
+    font-size: 14px;
+    text-align: center;
 }
 
 /* === PAGINA SOBRE === */
+
 
 .comum {
     background-color: white; 
     padding: 10px;
     padding-left: 20px;
-    margin-bottom: 20px;
     border-radius: 20px;
+    margin-bottom: 40px;
 }
 
 .comum h1 {
     padding-top: 20px;
     margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 500;
 }
 
 .comum p {
-    font-size: 18px;
+    font-size: 16px;
     padding-bottom: 20px;
 }
 
 .comum h3 {
     padding-top: 20px;
     margin: 0 0 20px 0;
+    font-size: 22px;
     
 }
 
@@ -207,43 +235,95 @@ main .content3 {
     width: 100%;
     gap: 20px;
     padding: 5px;
+    margin-bottom: 40px;
 }
 
 .receitas { 
-        width: 320px;
-        border: 2px solid darkgrey;
-        border-radius: 10px;
-        background-color: white;
-        height: 255px;
-        
+    width: 300px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid white;
+    padding: 10px;
 }
 
 .receitas:hover {
    
     cursor: pointer;
-    background: bisque;
-    color: salmon;
+    border: 1px solid #1198F2;
+    color: black;
+    
 }
 
 .receitas img {
     border-radius: 10px;
     border-bottom-left-radius: 0;
-    width: 320px;
-    height: 160px;
+    width: 100%;
+    max-height: 160px;
     border-bottom-right-radius: 0;
 }
 
 .receitas h2 {
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 18px;
     margin-top: 8px;
-    text-align: center;
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 2px;
+    color: #3E5A6B;
 }
 
 .receitas p {
+    font-size: 12px;
+    text-align: left;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    color: #254A63;
+    font-weight: bold;
+}
+
+/* PAGINA CHEFS */
+
+main h4 {
+    font-size: 22px;
+    margin-top: 60px;
+    font-weight: 500;
+}
+
+.chef-content {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.chef { 
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+}
+.chef div {
+    align-self: center;
+}
+
+.chef div h2 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.chef div p {
     font-size: 14px;
-    text-align: right;
-    margin-top: 5px;
-    margin-right: 8px;
+    color: #254A63;
+    font-weight: bold;
+    
+}
+
+.chef img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
 }
 
 /* === ERRO 404 === */

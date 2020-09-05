@@ -1,60 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    width: 100%;
-    background: #faead6;
-}
-
-
-#pageHome { 
-    width: 960px;
-    margin: auto;
-
-}
-
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 500px;
-}
-
-header #logo {
-    margin: 40px auto;
-    width: 120px;
-}
-
-header #logo img {
-    width: 120px;
-}
-
-header #menu {
-margin: 40px auto;
-   width: 240px;
-}
-
-#menu span {
-    font-weight: bold;
-    font-size: 28px;
-}
-
-
-header #menu a{
-    text-decoration: none;
-    font-size: 24px;
-    line-height: 19px;
-    margin: 10px;
-    color: black;
-}
-
-header #menu a:hover {
-    font-weight: bold;
-    font-size: 28px;
-}
 
 
 .container { 
@@ -62,23 +5,26 @@ header #menu a:hover {
     background: white;
     padding-top: 40px;
     border-radius: 10px;
+    margin-bottom: 40px;
 }
 
 .receita-principal img {
-    width: 940px;
-    height: 280px;
-    border-radius: 20px;
+    width: 600px;
+    height: 260px;
+    border-radius: 8px;
 }
 
 .header-principal h2  {
-    font-size: 36px;
+    font-size: 30px;
     line-height: 42px;
-    padding: 10px;
     margin-top: 10px; 
+    font-weight: 500;
+    color: #3E5A6B;
 }
 
-.header-principal {
-    font-size: 20px;
+.header-principal p  {
+    font-size: 14px;
+    color: #254A63;
 }
 
 main {
@@ -89,6 +35,7 @@ main {
     margin-top: 60px;
     max-width: 920px;
     margin-left: 40px;
+    
 }
 
 .receita-header {
@@ -100,28 +47,32 @@ main {
 }
 
 .receita-header h2 {
-    font-size: 26px;
+    font-size: 24px;
     margin-right: 10px;
+    font-weight: 500;
 }
 
 .show-and-hide {
     padding: 3px;
     font-size: 10px;
-    background:lightsalmon;
+    background:#1198F2;
     border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
+    color: white;
 }
 
 .show-and-hide:hover {
-    background-color: salmon;
+    background-color: #0E7AC2;
 }
 
 .receita-information {
     max-width: 800px;
     display: inline-block;
     margin-bottom: 20px;
+    list-style-type: none;
 }
+
 
 .footer {
     background-color: whitesmoke; 

@@ -1,4 +1,3 @@
-const fs = require ("fs")
 const Recipes = require("../../models/Recipes")
 
 
@@ -6,7 +5,6 @@ module.exports = {
     index(req,res) {
 
         Recipes.index(function(recipes) {
-
             return res.render ("./admin/recipes/index", {recipes})
     
             })
@@ -30,7 +28,7 @@ module.exports = {
 
     show (req,res) {
         
-        Recipes.show(req.params.id, function(recipes) {            
+        Recipes.show(req.params.id, function(recipes) {   
         return res.render ("admin/recipes/show", {recipes})
 
         })
@@ -42,7 +40,7 @@ module.exports = {
 
         Recipes.chefsOptions (function(chefs) {
     
-            res.render ("admin/recipes/editar", {chefs,recipes})
+            res.render ("admin/recipes/edit", {chefs,recipes})
             
         })
     })

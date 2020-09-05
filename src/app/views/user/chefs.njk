@@ -1,0 +1,41 @@
+
+{% extends "./layout.njk" %}
+
+{% block title %}
+    <title>Receitas - Foodfy</title>
+{% endblock title %}
+
+{% block id %}
+    <body id="pagina-chefs">  
+{% endblock id %}
+
+{% block content %}
+    <main>
+
+        <h4>Chefs cadastrados</h4>
+
+        <div class="chef-content">
+            {% for chef in chefs %}
+                <div class="chef" id="{{chef.id}}" name= "{{chef.name}}">
+                    
+                    <img src="{{chef.avatar_url}}" alt="{{chef.name}}">
+
+                    <div>
+                        <h2>{{chef.name}}</h2>
+                        <p>{{chef.total}} 
+                        {% if chef.total <=1 %}receita{% endif %} 
+                        {% if chef.total >1 %}receitas{% endif %}
+                        </p>
+                    </div>
+
+                </div>
+            {% endfor %}
+            
+        </div>
+
+    </main>
+{% endblock content %}
+
+{% block scripts %}
+    <script src="scripts/script.js"></script>
+{% endblock scripts %}

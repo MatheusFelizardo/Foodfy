@@ -59,7 +59,7 @@ module.exports = {
 
                 let [count] = chefRecipes
                     
-                return res.render ("admin/chefs/editar", {chefs, count})
+                return res.render ("admin/chefs/edit", {chefs, count})
 
                 })
             })
