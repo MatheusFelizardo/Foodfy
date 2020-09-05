@@ -1,7 +1,7 @@
 <h2 align="center">Foodfy</h2>
 
 <p align="center">
-  <img src="https://i.ibb.co/T4dfQr5/site.png" width="500" heigth="500">
+  <img src="https://i.ibb.co/RgXhnXB/Foodfy.png" width="500" heigth="500">
 </p>
 
 <h3 align="center">
